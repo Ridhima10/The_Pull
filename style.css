@@ -1,0 +1,146 @@
+/* Font Imported */
+@font-face {
+  font-family:'Omegle';
+  src: url('omegle/OMEGLE.ttf');
+}
+.font1{
+  font-family: 'Omegle';
+  letter-spacing: 0.2rem;
+}
+.font2{
+  font-family:sans-serif;
+  letter-spacing: 2px;
+}
+/* Colors */
+:root {
+  --primary:#020437;
+  --heaven:white;
+  --ternary:rgba(0, 0, 0, 0.3); /*Transparent*/
+}
+/*Color utilities */
+.blue-bg{
+  background-color: var(--primary);
+}
+.blue-text{
+  color: var(--primary);
+}
+.blue-border{
+  border: 2px solid var(--primary);
+}
+/* Home */
+/* Nabvbar */
+.navbar{
+  -webkit-backdrop-filter: blur(3px);
+  background-color: var(--ternary);
+  backdrop-filter: blur(3px);
+}
+.drop1:hover{
+  background-color: var(--primary);
+  color: var(--heaven);
+}
+.border-hover::after {
+  content: '';
+  display: block;
+  margin-top: 0.3rem;
+  width: 0;
+  height: 0.2rem;
+  background: var(--heaven);
+  transition: width .3s;
+  position: relative;
+  top: 0.7rem;
+}
+.border-hover:hover::after {
+  width: 100%;
+}
+.active-page,.border-hover:focus{
+  border-bottom: 0.2rem solid var(--heaven);
+}
+/* Carousal */
+.bg {
+  background-attachment: fixed;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+}
+.bg>.container {
+  transform: translate(-50%, -50%);
+}
+.container>h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  min-width: 5rem;
+}
+.heading1{
+  left: 25rem;
+}
+.heading2{
+  top: 15rem;
+}
+/* Section 1 */
+hr {
+  width: 3rem;
+  opacity: 7;
+  padding: 1.3px;
+}
+/* Section3 */
+.btn1:hover{
+  background-color: var(--primary);
+  color: var(--heaven);
+}
+.grow {
+  transition: all .2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+}
+/* Footer */
+.foot-link{
+  --bs-text-opacity: 1;
+  color: rgba(var(--bs-secondary-rgb), var(--bs-text-opacity)) ;
+}
+.foot-link:hover{
+  color: var(--heaven);
+}
+.logo-footer{
+  position: relative;
+  bottom: 4rem;
+}
+/* Contact us */
+.email{
+  left: 5.5rem;
+}
+/* categories */
+.circle{
+    height: 2rem;
+    width: 2rem;
+    position: relative;
+    padding-top: 0.2rem;
+}
+.circle:hover{
+  border: 2px solid red;
+}
+.size{
+  position: relative;
+  bottom: 0.5rem;
+  height: 3rem;
+}
+@media screen and (min-width: 220px) and (max-width: 576px) {
+  .container>h1{
+    display: none;
+  }
+  .coming-soon{
+    height: 50%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .container>h1 {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .container>h1 {
+    display: none;
+  }
+}
